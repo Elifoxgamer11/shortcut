@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortcut</title>
+    <style>
+        body {
+            padding: 50px;
+        }
+
+        div {
+            background: olivedrab;
+            padding: 50px 150px;
+            width: min-content;
+            color: #fff;
+            display: none;
+        }
+        div.active{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Hello
+    </div>
+    <script>
+        var div = document.querySelector("div");
+        document.addEventListener('keydown', function (event) {
+            if (event.ctrlKey && event.key === 's') {
+                event.preventDefault();
+                div.classList.toggle("active");
+            }
+        });
+
+    </script>
+</body>
+
+</html>
